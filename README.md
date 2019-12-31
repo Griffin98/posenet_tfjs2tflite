@@ -1,6 +1,6 @@
 # Posenet TfJs2TFlite
 
-This repository provides ready to use script to convert posenet tfjs models into tflite model.
+This repository provides ready to use script to convert Posenet Tensorflow JS models to Tensorflow Lite model.
 
 ## How to use ?
 

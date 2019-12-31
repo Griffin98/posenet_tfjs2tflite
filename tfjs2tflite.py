@@ -128,6 +128,8 @@ def build_network(image, layers, variables):
 
 def convert_tfjs_to_pb():
     cfg = load_config()
+    weights = load_config(config_name='weights.yaml')
+
     model_id = cfg['checkpoints_index']
     checkpoints = cfg['checkpoints']
     image_size = cfg['imageSize']
@@ -135,11 +137,11 @@ def convert_tfjs_to_pb():
     chkpoint = checkpoints[model_id]
 
     if chkpoint == 'mobilenet_v1_050':
-        mobile_net_arch = cfg['mobileNet50Architecture']
+        mobile_net_arch = weights['mobileNet50Architecture']
     elif chkpoint == 'mobilenet_v1_075':
-        mobile_net_arch = cfg['mobileNet75Architecture']
+        mobile_net_arch = weights['mobileNet75Architecture']
     else:
-        mobile_net_arch = cfg['mobileNet100Architecture']
+        mobile_net_arch = weights['mobileNet100Architecture']
 
     width = image_size
     height = image_size
