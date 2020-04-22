@@ -7,7 +7,8 @@ import os
 from config import load_config
 
 CFG = load_config()
-GOOGLE_CLOUD_STORAGE_DIR = CFG['GOOGLE_CLOUD_STORAGE_DIR']
+weights = load_config(config_name='weights.yaml')
+GOOGLE_CLOUD_STORAGE_DIR = weights['GOOGLE_CLOUD_STORAGE_DIR']
 CHECKPOINTS = CFG['checkpoints']
 CHK = CFG['checkpoints_index']
 
