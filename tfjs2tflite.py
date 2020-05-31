@@ -200,7 +200,7 @@ def convert_pb_to_tflite():
     output = os.path.join(MODEL_DIR, 'posenet_%s_%dx%d.tflite' % (chkpoint,image_size,image_size))
     graph_def_file = os.path.join(MODEL_DIR,'posenet_%s.pb' % chkpoint)
     input_arrays = ['image']
-    output_arrays = ['heatmap','offset_2','displacement_fwd_2','displacement_bwd_2']
+    output_arrays = ['heatmap_2','offset_2','displacement_fwd_2','displacement_bwd_2']
 
     print("Converting .pb to .tflite ..........")
 
